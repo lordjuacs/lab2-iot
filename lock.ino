@@ -32,11 +32,10 @@ void loop() {
     if (key) {
       input += key;
       count++;
-      Serial.println(key);
+      Serial.print(key);
     }
   }
   Serial.println(input);
-  Serial.println(password);
   if (input == password) {
     servo.write(90);
     delay(5000);
