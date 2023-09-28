@@ -21,6 +21,7 @@ void setup() {
   servo.write(0);
   delay(1000);
   Serial.begin(9600);
+  Serial.println("Enter password:");
 }
 
 
@@ -42,6 +43,7 @@ void loop() {
     servo.write(0); // Lock the servo after a successful unlock
     input = ""; // Clear the input
     count = 1;
+    Serial.println("\nCorrect!");
   } else {
     Serial.println("\nIncorrect password!");
     input = ""; // Clear the input for the next attempt
